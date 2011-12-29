@@ -25,16 +25,8 @@ provided by the Kant generator for Python by Mark Pilgrim,
 described in the book "Dive into Python". The package is
 modelled on lipsum, and may be used for similar purposes.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -49,7 +41,6 @@ modelled on lipsum, and may be used for similar purposes.
 #- source
 %doc %{_texmfdistdir}/source/latex/kantlipsum/kantlipsum.dtx
 %doc %{_texmfdistdir}/source/latex/kantlipsum/kantlipsum.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,5 +51,3 @@ modelled on lipsum, and may be used for similar purposes.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
