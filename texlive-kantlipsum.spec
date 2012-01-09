@@ -1,12 +1,12 @@
-# revision 24658
+# revision 24935
 # category Package
 # catalog-ctan /macros/latex/contrib/kantlipsum
-# catalog-date 2011-11-23 08:28:31 +0100
+# catalog-date 2011-12-24 01:22:03 +0100
 # catalog-license lppl1.3
-# catalog-version 0.1
+# catalog-version 0.5
 Name:		texlive-kantlipsum
-Version:	0.1
-Release:	3
+Version:	0.5
+Release:	1
 Summary:	Generate sentences in Kant's style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/kantlipsum
