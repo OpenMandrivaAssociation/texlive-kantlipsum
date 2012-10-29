@@ -1,7 +1,7 @@
-# revision 24935
+# revision 27994
 # category Package
 # catalog-ctan /macros/latex/contrib/kantlipsum
-# catalog-date 2011-12-24 01:22:03 +0100
+# catalog-date 2012-03-12 20:30:51 +0100
 # catalog-license lppl1.3
 # catalog-version 0.5
 Name:		texlive-kantlipsum
