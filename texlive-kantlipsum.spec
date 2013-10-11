@@ -1,7 +1,7 @@
-# revision 24935
+# revision 27994
 # category Package
 # catalog-ctan /macros/latex/contrib/kantlipsum
-# catalog-date 2011-12-24 01:22:03 +0100
+# catalog-date 2012-03-12 20:30:51 +0100
 # catalog-license lppl1.3
 # catalog-version 0.5
 Name:		texlive-kantlipsum
@@ -51,23 +51,3 @@ modelled on lipsum, and may be used for similar purposes.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Mon Jan 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5-1
-+ Revision: 758921
-- Update to latest upstream release
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1-3
-+ Revision: 752957
-- Rebuild to reduce used resources
-
-* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1-2
-+ Revision: 745259
-- texlive-kantlipsum
-
-* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1-1
-+ Revision: 739647
-- texlive-kantlipsum
-- texlive-kantlipsum
-
