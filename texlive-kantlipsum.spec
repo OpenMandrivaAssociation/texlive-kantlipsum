@@ -6,7 +6,7 @@
 # catalog-version 0.5
 Name:		texlive-kantlipsum
 Version:	0.5
-Release:	2
+Release:	3
 Summary:	Generate sentences in Kant's style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/kantlipsum
