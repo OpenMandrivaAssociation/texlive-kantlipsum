@@ -1,12 +1,6 @@
-# revision 27994
-# category Package
-# catalog-ctan /macros/latex/contrib/kantlipsum
-# catalog-date 2012-03-12 20:30:51 +0100
-# catalog-license lppl1.3
-# catalog-version 0.5
 Name:		texlive-kantlipsum
-Version:	0.5
-Release:	9
+Version:	0.7
+Release:	1
 Summary:	Generate sentences in Kant's style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/kantlipsum
@@ -35,12 +29,10 @@ modelled on lipsum, and may be used for similar purposes.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/kantlipsum/kantlipsum.sty
-%doc %{_texmfdistdir}/doc/latex/kantlipsum/README
-%doc %{_texmfdistdir}/doc/latex/kantlipsum/kantlipsum.pdf
+%{_texmfdistdir}/tex/latex/kantlipsum
+%doc %{_texmfdistdir}/doc/latex/kantlipsum
 #- source
-%doc %{_texmfdistdir}/source/latex/kantlipsum/kantlipsum.dtx
-%doc %{_texmfdistdir}/source/latex/kantlipsum/kantlipsum.ins
+%doc %{_texmfdistdir}/source/latex/kantlipsum
 
 #-----------------------------------------------------------------------
 %prep
