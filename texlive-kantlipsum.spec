@@ -1,13 +1,13 @@
 Name:		texlive-kantlipsum
-Version:	0.7
-Release:	2
+Version:	51727
+Release:	1
 Summary:	Generate sentences in Kant's style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/kantlipsum
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -20,12 +20,12 @@ described in the book "Dive into Python". The package is
 modelled on lipsum, and may be used for similar purposes.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -36,7 +36,8 @@ modelled on lipsum, and may be used for similar purposes.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
