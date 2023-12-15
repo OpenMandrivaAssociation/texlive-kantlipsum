@@ -1,6 +1,6 @@
 Name:		texlive-kantlipsum
-Version:	51727
-Release:	2
+Version:	68983
+Release:	1
 Summary:	Generate sentences in Kant's style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/kantlipsum
