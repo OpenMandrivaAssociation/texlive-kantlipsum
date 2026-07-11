@@ -1,46 +1,24 @@
-Name:		texlive-kantlipsum
-Version:	68983
-Release:	1
-Summary:	Generate sentences in Kant's style
+%global tl_name kantlipsum
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.8c
+Release:	%{tl_revision}.1
+Summary:	Generate sentences in Kants style
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/kantlipsum
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.source.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/kantlipsum.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package spits out sentences in Kantian style; the text is
-provided by the Kant generator for Python by Mark Pilgrim,
-described in the book "Dive into Python". The package is
-modelled on lipsum, and may be used for similar purposes.
+The package spits out sentences in Kantian style; the text is provided
+by the Kant generator for Python by Mark Pilgrim, described in the book
+"Dive into Python". The package is modelled on lipsum, and may be used
+for similar purposes.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/kantlipsum
-%doc %{_texmfdistdir}/doc/latex/kantlipsum
-#- source
-%doc %{_texmfdistdir}/source/latex/kantlipsum
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
